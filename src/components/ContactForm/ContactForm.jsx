@@ -3,7 +3,7 @@ import * as yup from 'yup'
 import css from './ContactForm.module.css'
 // import {nanoid} from 'nanoid'
 import { useDispatch } from 'react-redux'
-import { setContact } from '../../redux/slice'
+import { addContact } from '../../redux/contactsSlice'
 
 const SignupSchema = yup.object().shape({
   name: yup.string().trim()
@@ -29,7 +29,7 @@ const values = {
 const dispatch = useDispatch()
 
 function submit(data, actions){
-  dispatch(setContact(data))
+  dispatch(addContact(data))
  data = values
   actions.resetForm();
 }
