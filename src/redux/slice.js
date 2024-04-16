@@ -10,6 +10,7 @@ const initialContacts = {contacts: [
 filter: '',
 }
 
+
 const slice = createSlice({
     name: 'contacts',
 initialState: initialContacts,
@@ -27,3 +28,4 @@ reducers: {
 export const contactsReducer = slice.reducer
 export const {getContacts, deleteContact, setContact} = slice.actions
 export const {selectContacts, selectFilter} = slice.selectors
+console.log(slice.a)
